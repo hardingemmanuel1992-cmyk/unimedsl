@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - UNIMED Mental Health Resource</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="img/unimed logo.png" alt="UNIMED Logo" class="logo-img">
+                <span>UNIMED</span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li class="dropdown">
+                    <a href="about.html" class="dropbtn">About ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="treatment.html">Treatment</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="addiction.html">Addiction Info</a></li>
+                        <li><a href="gallery.html">Facility Photo Tour</a></li>
+                        <li><a href="about.html">About UNIMED</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#admissions">Admissions</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Personnel ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="board.html">Board of Directors</a></li>
+                        <li><a href="advisory.html">Advisory Board Members</a></li>
+                        <li><a href="clinical.html">Clinical Team</a></li>
+                        <li><a href="support-team.html">Support Team</a></li>
+                        <li><a href="lahai.html">The Lahai's</a></li>
+                        <li><a href="bethel-staff.html">Bethel Staff</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="index.html#contact" class="dropbtn">Contact ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="index.html#contact">Contact Us</a></li>
+                        <li><a href="invite-to-rachel.html">Invite to Rachel</a></li>
+                        <li><a href="support-groups.html">Support to Groups</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#donate" class="btn-donate">Donate</a></li>
+            </ul>
+            <div class="mobile-menu" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero" id="home" style="margin-top: 70px; padding: 100px 2rem 50px;">
+        <h1>UNIMED Blog</h1>
+        <p class="tagline">Insights, stories, and updates on mental health and recovery</p>
+    </section>
+
+    <section class="section-padding bg-white">
+        <div class="container">
+            <h2 class="section-title">UNIMED Blog & Resources</h2>
+            <p style="text-align: center; font-size: 1.1rem; max-width: 800px; margin: 0 auto; margin-bottom: 3rem;">
+                Explore our collection of articles, stories, and insights on mental health, recovery, and our mission to restore broken lives.
+            </p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                    <h3 style="color: #667eea; margin-bottom: 1rem;">Our Mission Story</h3>
+                    <p>UNIMED Mental Health Resource (Inc) was founded on the backdrop of a true story that mental health is a disease, that it is real and does not discriminate. The organization was named after a young man whose dreams of becoming a mechanical engineer was shattered by mental illness.</p>
+                </div>
+                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                    <h3 style="color: #667eea; margin-bottom: 1rem;">BETHEL's Impact</h3>
+                    <p>Our residential treatment center, BETHEL, provides a safe space where persons with substance abuse and mental health conditions are treated, rehabilitated, and empowered with skills to return to their communities as valued citizens.</p>
+                </div>
+                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                    <h3 style="color: #667eea; margin-bottom: 1rem;">Global Initiative</h3>
+                    <p>Mrs. Doris Festus Lahai visited Kissy Mental Home in Sierra Leone and witnessed the dire conditions. UNIMED is committed to improving mental health care and support globally.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background: #f8f9fa;">
+        <div class="container">
+            <h3 style="text-align: center; color: #667eea; margin-bottom: 2rem;">What We Do</h3>
+            <div style="max-width: 900px; margin: 0 auto;">
+                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem;">
+                    UNIMED is a 501(c)(3) organization dedicated to restoring broken lives through medical treatment, psychological therapy, skills training and accommodation. We treat individuals with mental illnesses through evidence-based approaches and compassionate care.
+                </p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: center;">
+                    <div>
+                        <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">💊</div>
+                        <h4 style="color: #667eea;">Medication Management</h4>
+                    </div>
+                    <div>
+                        <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🗣️</div>
+                        <h4 style="color: #667eea;">Therapy</h4>
+                    </div>
+                    <div>
+                        <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🎯</div>
+                        <h4 style="color: #667eea;">Skills Training</h4>
+                    </div>
+                    <div>
+                        <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🏥</div>
+                        <h4 style="color: #667eea;">Residential Care</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#services">Services</a>
+                <a href="about.html">About</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+            <p>&copy; 2025 UNIMED Mental Health Resource (INC). All rights reserved.</p>
+            <p class="footer-tagline">Restoring Broken Lives, One Person at a Time</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

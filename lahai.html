@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Lahai's - UNIMED Mental Health Resource</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="img/unimed logo.png" alt="UNIMED Logo" class="logo-img">
+                <span>UNIMED</span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li class="dropdown">
+                    <a href="about.html" class="dropbtn">About ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="treatment.html">Treatment</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="addiction.html">Addiction Info</a></li>
+                        <li><a href="gallery.html">Facility Photo Tour</a></li>
+                        <li><a href="about.html">About UNIMED</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#admissions">Admissions</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Personnel ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="board.html">Board of Directors</a></li>
+                        <li><a href="advisory.html">Advisory Board Members</a></li>
+                        <li><a href="clinical.html">Clinical Team</a></li>
+                        <li><a href="support-team.html">Support Team</a></li>
+                        <li><a href="lahai.html">The Lahai's</a></li>
+                        <li><a href="bethel-staff.html">Bethel Staff</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="index.html#contact" class="dropbtn">Contact ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                        <li><a href="invite-to-rachel.html">Invite to Rachel</a></li>
+                        <li><a href="support-groups.html">Support to Groups</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#donate" class="btn-donate">Donate</a></li>
+            </ul>
+            <div class="mobile-menu" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero" id="home" style="margin-top: 70px; padding: 100px 2rem 50px;">
+        <h1>The Lahai's</h1>
+        <p class="tagline">Dedicated leaders and supporters of UNIMED's mission</p>
+    </section>
+
+    <section class="section-padding bg-white">
+        <div class="container">
+            <h2 class="section-title">The Lahai Family Leadership</h2>
+            <div class="philosophy-vision-grid">
+                <div class="philosophy-box">
+                    <h3>Founding Vision</h3>
+                    <p>The Lahai family's deep commitment to mental health care stems from personal experience and a passion for helping others. Their dedication to UNIMED's mission reflects their belief that mental illness is a disease that deserves compassionate, professional treatment and community support.</p>
+                </div>
+                <div class="vision-box">
+                    <h3>Global Impact</h3>
+                    <p>Mrs. Doris Festus Lahai's visit to Kissy Mental Home in Sierra Leone revealed the critical mental health crisis affecting vulnerable populations. The Lahai family is committed to extending UNIMED's mission globally, bringing dignity and quality care to those most in need.</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem; background: #f8f9fa; padding: 2rem; border-radius: 15px; text-align: center;">
+                <h3 style="color: #667eea; margin-bottom: 1rem;">Our Commitment</h3>
+                <p style="font-size: 1.1rem; line-height: 1.8;">
+                    The Lahai family's leadership has shaped UNIMED into an organization that treats individuals with mental illnesses through medication, therapy, and skills training. Their vision extends to Sierra Leone and beyond, where they work to improve mental health care and support vulnerable populations.
+                </p>
+            </div>
+        </div>
+
+        <div class="leadership-subsection">
+                <h3>Leadership</h3>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <img src="img/doris.png" alt="Mrs. Doris Festus Lahai">
+                        <h4>Mrs. Doris Festus Lahai</h4>
+                        <p class="role">Founder & CFO</p>
+                        <p>Registered Nurse and Nurse Practitioner with extensive healthcare and organizational leadership background spanning multiple continents. Her passion for mental health advocacy stems from personal experience and her commitment to transforming lives.</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="img/festus.png" alt="Dr. Festus S Lahai">
+                        <h4>Dr. Festus S Lahai</h4>
+                        <p class="role">CEO</p>
+                        <p>Leading our organization with vision, strategic direction, and dedication to serving individuals with mental health challenges and substance abuse needs.</p>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#services">Services</a>
+                <a href="about.html">About</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+            <p>&copy; 2025 UNIMED Mental Health Resource (INC). All rights reserved.</p>
+            <p class="footer-tagline">Restoring Broken Lives, One Person at a Time</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

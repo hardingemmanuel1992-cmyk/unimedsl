@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIMED Mental Health Resource - Restoring Broken Lives</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="img/unimed logo.png" alt="UNIMED Logo" class="logo-img">
+                <span>UNIMED</span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li class="dropdown">
+                    <a href="#about" class="dropbtn">About ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="treatment.html">Treatment</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="addiction.html">Addiction Info</a></li>
+                        <li><a href="gallery.html">Facility Photo Tour</a></li>
+                        <li><a href="about.html">About UNIMED</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Personnel ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="board.html">Board of Directors</a></li>
+                        <li><a href="advisory.html">Advisory Board Members</a></li>
+                        <li><a href="clinical.html">Clinical Team</a></li>
+                        <li><a href="support-team.html">Support Team</a></li>
+                        <li><a href="lahai.html">The Lahai's</a></li>
+                        <li><a href="bethel-staff.html">Bethel Staff</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#contact" class="dropbtn">Contact ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                        <li><a href="invite-to-rachel.html">Invite to Rachel</a></li>
+                        <li><a href="support-groups.html">Support to Groups</a></li>
+                    </ul>
+                </li>
+                <li><a href="#donate" class="btn-donate">Donate</a></li>
+            </ul>
+            <div class="mobile-menu" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>UNIMED MENTAL HEALTH RESOURCE (INC)</h1>
+        <p class="motto">RESTORING BROKEN LIVES</p>
+        <p class="tagline">UNIMED Mental Health Resource (Inc) was founded on the backdrop of a true story that mental health is a disease, that it is real and does not discriminate. The organization was named after a young man whose dreams of becoming a mechanical engineer was shattered by mental illness. The organization later became UNIMED in 2023 after the passing of her second son. We treat individuals with mental illnesses through medication, therapy and skills training.</p>
+        <div class="cta-buttons">
+            <a href="#contact" class="btn btn-primary">Get Help Now</a>
+            <a href="#donate" class="btn btn-secondary">Donate Now</a>
+        </div>
+    </section>
+
+    <section class="carousel-section">
+        <div class="carousel-container">
+            <div class="carousel-slide active">
+                <div class="carousel-content">
+                    <div class="carousel-icon">🌟</div>
+                    <h3>What we do</h3>
+                    <p>UNIMED is a 501(c)(3) organization dedicated to restoring broken lives through medical treatment, psychological therapy, skills training and accommodation.</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="carousel-content">
+                    <div class="carousel-icon">💚</div>
+                    <h3>Compassionate Care</h3>
+                    <p>Our team of dedicated professionals treats every individual with dignity and respect.</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="carousel-content">
+                    <div class="carousel-icon">🤝</div>
+                    <h3>Community Support</h3>
+                    <p>You're not alone. Join our supportive community on the path to mental wellness.</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="carousel-content">
+                    <div class="carousel-icon">🎯</div>
+                    <h3>Personalized Treatment</h3>
+                    <p>Tailored care plans designed specifically for your unique needs and goals.</p>
+                </div>
+            </div>
+            <button class="carousel-btn prev" onclick="moveSlide(-1)">❮</button>
+            <button class="carousel-btn next" onclick="moveSlide(1)">❯</button>
+            <div class="carousel-dots">
+                <span class="dot active" onclick="currentSlide(0)"></span>
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-cta">
+        <div class="container">
+            <h2>Learn More About Our Mission</h2>
+            <p>Discover our complete story, values, and commitment to restoring broken lives.</p>
+            <a href="about.html" class="cta-button">Read Our Full Story</a>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">💊</div>
+                <h3>Medication Management</h3>
+                <p>Professional psychiatric evaluation and medication management to help stabilize and improve mental health conditions under expert clinical supervision.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🗣️</div>
+                <h3>Psychological Therapy</h3>
+                <p>Individual and group therapy sessions with licensed therapists specializing in various mental health challenges, trauma, and substance abuse recovery.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🎯</div>
+                <h3>Skills Training</h3>
+                <p>Practical life skills training to help individuals develop coping strategies, improve daily functioning, and successfully reintegrate into their communities.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🏥</div>
+                <h3>Accommodation & Support</h3>
+                <p>Safe, supportive residential treatment environments providing comprehensive care and rehabilitation for individuals with substance abuse and mental health conditions.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📚</div>
+                <h3>Education & Awareness</h3>
+                <p>Community outreach and educational campaigns to increase knowledge and understanding of mental illness while reducing stigma.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🌍</div>
+                <h3>Community Programs</h3>
+                <p>Support for homeless shelters, mental health facilities, and vulnerable populations in the United States, Sierra Leone and beyond.</p>
+            </div>
+        </div>
+    </section>
+    <section class="section-padding bg-white">
+        <div class="container">
+            <h2 class="section-title">What Drives Us</h2>
+            <div class="philosophy-vision-grid">
+                <div class="philosophy-box">
+                    <h3>Our Philosophy</h3>
+                    <p>Through education and the creation of the right environment, individuals can experience positive behavioral change. Our residential treatment center, <strong>BETHEL</strong>, provides a safe space where persons with substance abuse and mental health conditions are treated, rehabilitated, and empowered with skills to return to their communities as valued citizens.</p>
+                </div>
+                <div class="vision-box">
+                    <h3>Our Vision</h3>
+                    <p>Together with our Board, we provide comprehensive, coordinated programs supporting diagnosis, treatment, rehabilitation, and wellbeing of individuals in the United States, Sierra Leone and beyond. We create a world where mental illness is understood and every person has access to quality care.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sierra-leone-section">
+        <div class="sierra-leone-container">
+            <h2 class="section-title-light">Global Reach: Sierra Leone</h2>
+            <p class="sierra-leone-intro">Extending our mission to address the critical mental health crisis</p>
+            
+            <div class="sierra-leone-grid">
+                <div class="sierra-leone-card">
+                    <h3>📊 The Challenge</h3>
+                    <ul>
+                        <li>• 7 million population, 2 psychiatrists</li>
+                        <li>• 1 in 4 affected by mental illness</li>
+                        <li>• <1% of health aid to mental health</li>
+                        <li>• Only 1 psychiatric hospital (120 beds)</li>
+                        <li>• Outdated 1902 Lunacy Bill</li>
+                    </ul>
+                </div>
+                <div class="sierra-leone-card">
+                    <h3>🤝 Our Response</h3>
+                    <p>Mrs. Doris Festus Lahai visited Kissy Mental Home and witnessed the dire conditions. We're committed to:</p>
+                    <ul>
+                        <li>✓ Environmental & hygiene improvements</li>
+                        <li>✓ Supporting structural upgrades</li>
+                        <li>✓ Patient care advancement</li>
+                        <li>✓ Community education</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="sierra-leone-footer">
+                <p>Your donation helps bring dignity and quality care to Sierra Leone's most forgotten citizens. Together, we can restore broken lives across continents.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="contact-content">
+            <h2>Get in Touch</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="info-item">
+                        <div class="info-icon">📍</div>
+                        <div class="info-text">
+                            <h4>Address</h4>
+                            <p>21 Station Road Mayemi<br>Freetown, Sierra Leone</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">📞</div>
+                        <div class="info-text">
+                            <h4>Phone</h4>
+                            <p>+23276694072 | +23277920496 | +18176905032 | +12673159684</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">✉️</div>
+                        <div class="info-text">
+                            <h4>Email</h4>
+                            <p><a href="mailto:info@unimedmh.org">info@unimedmh.org</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">🕒</div>
+                        <div class="info-text">
+                            <h4>Hours</h4>
+                            <p>Monday - Friday: 8:00 AM - 6:00 PM<br>
+                            Saturday: 9:00 AM - 2:00 PM<br>
+                            24/7 Crisis Support Available</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" onsubmit="handleSubmit(event)">
+                    <h3 class="form-heading">Send Us a Message</h3>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="donate" id="donate">
+        <div class="donate-content">
+            <h2>Support Our Mission</h2>
+            <p class="donate-description">Your donation helps us provide life-changing mental health services to those who need it most. Every contribution makes a difference in restoring broken lives.</p>
+            
+            <div class="donation-amounts">
+                <button class="amount-btn" onclick="selectAmount(25)">$25</button>
+                <button class="amount-btn" onclick="selectAmount(50)">$50</button>
+                <button class="amount-btn" onclick="selectAmount(100)">$100</button>
+                <button class="amount-btn" onclick="selectAmount(250)">$250</button>
+            </div>
+
+            <div class="custom-amount">
+                <p class="donation-subtext">Or enter a custom amount:</p>
+                <input type="number" id="customAmount" placeholder="Enter amount" min="1" oninput="selectCustomAmount()">
+            </div>
+
+            <button class="donate-btn" onclick="processDonation()" id="donateButton">
+                Donate Now
+            </button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="about.html">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <p>&copy; 2025 UNIMED Mental Health Resource (INC). All rights reserved.</p>
+            <p class="footer-tagline">Restoring Broken Lives, One Person at a Time</p>
+            <div class="footer-logo">
+                <img src="img/unimed logo.png" alt="UNIMED Logo">
+                <div class="footer-logo-text"><br>
+                    <h4>UNIMED MENTAL HEALTH RESOURCE</h4>
+                    <p>Restoring Broken Lives</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let currentSlideIndex = 0;
+        let autoSlideInterval;
+        let selectedDonationAmount = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.carousel-slide');
+            const dots = document.querySelectorAll('.dot');
+            
+            if (index >= slides.length) {
+                currentSlideIndex = 0;
+            } else if (index < 0) {
+                currentSlideIndex = slides.length - 1;
+            } else {
+                currentSlideIndex = index;
+            }
+            
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            slides[currentSlideIndex].classList.add('active');
+            dots[currentSlideIndex].classList.add('active');
+        }
+
+        function moveSlide(direction) {
+            showSlide(currentSlideIndex + direction);
+            resetAutoSlide();
+        }
+
+        function currentSlide(index) {
+            showSlide(index);
+            resetAutoSlide();
+        }
+
+        function autoSlide() {
+            moveSlide(1);
+        }
+
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval);
+            autoSlideInterval = setInterval(autoSlide, 5000);
+        }
+
+        // Start auto-sliding
+        autoSlideInterval = setInterval(autoSlide, 5000);
+
+        // Donation functionality
+        function selectAmount(amount) {
+            selectedDonationAmount = amount;
+            document.getElementById('customAmount').value = '';
+            
+            // Update button styles
+            document.querySelectorAll('.amount-btn').forEach(btn => {
+                btn.classList.remove('selected');
+            });
+            event.target.classList.add('selected');
+        }
+
+        function selectCustomAmount() {
+            const customAmount = parseFloat(document.getElementById('customAmount').value);
+            if (customAmount > 0) {
+                selectedDonationAmount = customAmount;
+                document.querySelectorAll('.amount-btn').forEach(btn => {
+                    btn.classList.remove('selected');
+                });
+            }
+        }
+
+        function processDonation() {
+            if (selectedDonationAmount <= 0) {
+                alert('Please select or enter a donation amount.');
+                return;
+            }
+
+            // Simulate donation processing
+            const donateBtn = document.getElementById('donateButton');
+            donateBtn.disabled = true;
+            donateBtn.textContent = 'Processing...';
+
+            setTimeout(() => {
+                alert(`Thank you for your generous donation of ${selectedDonationAmount.toFixed(2)}! Your support helps us restore broken lives and provide critical mental health services.\n\nA confirmation email will be sent to you shortly.`);
+                
+                // Reset
+                selectedDonationAmount = 0;
+                document.getElementById('customAmount').value = '';
+                document.querySelectorAll('.amount-btn').forEach(btn => {
+                    btn.classList.remove('selected');
+                });
+                donateBtn.disabled = false;
+                donateBtn.textContent = 'Donate Now';
+            }, 2000);
+        }
+
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Thank you for reaching out! We will contact you soon.');
+            event.target.reset();
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    document.getElementById('navLinks').classList.remove('active');
+                }
+            });
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.background = 'linear-gradient(135deg, #5568d3 0%, #6a3f94 100%)';
+            } else {
+                header.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+            }
+        });
+    </script>
+</body>
+</html>

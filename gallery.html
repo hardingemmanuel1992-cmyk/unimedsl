@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facility Photo Tour - UNIMED Mental Health Resource</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="img/unimed logo.png" alt="UNIMED Logo" class="logo-img">
+                <span>UNIMED</span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li class="dropdown">
+                    <a href="about.html" class="dropbtn">About ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="treatment.html">Treatment</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="addiction.html">Addiction Info</a></li>
+                        <li><a href="gallery.html">Facility Photo Tour</a></li>
+                        <li><a href="about.html">About UNIMED</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#admissions">Admissions</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Personnel ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="board.html">Board of Directors</a></li>
+                        <li><a href="advisory.html">Advisory Board Members</a></li>
+                        <li><a href="clinical.html">Clinical Team</a></li>
+                        <li><a href="support-team.html">Support Team</a></li>
+                        <li><a href="lahai.html">The Lahai's</a></li>
+                        <li><a href="bethel-staff.html">Bethel Staff</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="index.html#contact" class="dropbtn">Contact ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="index.html#contact">Contact Us</a></li>
+                        <li><a href="invite-to-rachel.html">Invite to Rachel</a></li>
+                        <li><a href="support-groups.html">Support to Groups</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#donate" class="btn-donate">Donate</a></li>
+            </ul>
+            <div class="mobile-menu" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero" id="home" style="margin-top: 70px; padding: 100px 2rem 50px;">
+        <h1>Facility Photo Tour</h1>
+        <p class="tagline">Take a virtual tour of our modern treatment facilities</p>
+    </section>
+
+    <section class="section-padding bg-white">
+        <div class="container">
+            <h2 class="section-title">BETHEL Residential Treatment Center</h2>
+            <p style="text-align: center; font-size: 1.1rem; max-width: 800px; margin: 0 auto; margin-bottom: 3rem;">
+                BETHEL's state-of-the-art facilities are designed to provide a safe, therapeutic environment for recovery. Our comfortable accommodations and well-maintained amenities support healing and growth.
+            </p>
+
+            <div class="philosophy-vision-grid">
+                <div class="philosophy-box">
+                    <h3>Our Facilities</h3>
+                    <p>BETHEL features modern residential accommodations, therapy spaces, recreational areas, and medical facilities. Each environment is thoughtfully designed to promote comfort, dignity, and successful recovery. We maintain clean, safe standards across all areas.</p>
+                </div>
+                <div class="vision-box">
+                    <h3>Therapeutic Environment</h3>
+                    <p>Beyond physical structures, BETHEL creates a community of healing where residents support one another. Our facility fosters connection, hope, and the belief that recovery is possible. The environment itself becomes part of the treatment process.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background: #f8f9fa;">
+        <div class="container">
+            <h3 style="text-align: center; color: #667eea; margin-bottom: 2rem; font-size: 1.8rem;">Facility Amenities & Services</h3>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🛏️</div>
+                    <h3>Comfortable Accommodations</h3>
+                    <p>Private and shared rooms with modern amenities designed for comfort and rest during recovery.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🍽️</div>
+                    <h3>Nutritious Meals</h3>
+                    <p>Balanced, wholesome meals prepared to support physical and mental wellness.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏃</div>
+                    <h3>Recreation & Activities</h3>
+                    <p>Outdoor spaces and recreational activities that promote physical health and community bonding.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📚</div>
+                    <h3>Learning Spaces</h3>
+                    <p>Dedicated areas for therapy sessions, skills training, and educational programs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#services">Services</a>
+                <a href="about.html">About</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+            <p>&copy; 2025 UNIMED Mental Health Resource (INC). All rights reserved.</p>
+            <p class="footer-tagline">Restoring Broken Lives, One Person at a Time</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invite to Rachel - UNIMED Mental Health Resource</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="img/unimed logo.png" alt="UNIMED Logo" class="logo-img">
+                <span>UNIMED</span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li class="dropdown">
+                    <a href="about.html" class="dropbtn">About ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="treatment.html">Treatment</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="addiction.html">Addiction Info</a></li>
+                        <li><a href="gallery.html">Facility Photo Tour</a></li>
+                        <li><a href="about.html">About UNIMED</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#admissions">Admissions</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Personnel ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="board.html">Board of Directors</a></li>
+                        <li><a href="advisory.html">Advisory Board Members</a></li>
+                        <li><a href="clinical.html">Clinical Team</a></li>
+                        <li><a href="support-team.html">Support Team</a></li>
+                        <li><a href="lahai.html">The Lahai's</a></li>
+                        <li><a href="bethel-staff.html">Bethel Staff</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="index.html#contact" class="dropbtn">Contact ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                        <li><a href="invite-to-rachel.html">Invite to Rachel</a></li>
+                        <li><a href="support-groups.html">Support to Groups</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#donate" class="btn-donate">Donate</a></li>
+            </ul>
+            <div class="mobile-menu" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero" id="home" style="margin-top: 70px; padding: 100px 2rem 50px;">
+        <h1>Invite to Rachel</h1>
+        <p class="tagline">Learn more about this important program</p>
+    </section>
+
+    <section class="section-padding bg-white">
+        <div class="container">
+            <h2 class="section-title">Invite to Rachel Program</h2>
+            <p style="text-align: center; font-size: 1.1rem; max-width: 800px; margin: 0 auto; margin-bottom: 3rem;">
+                The Invite to Rachel program is a community outreach and support initiative designed to help individuals and families affected by mental health challenges.
+            </p>
+
+            <div class="philosophy-vision-grid">
+                <div class="philosophy-box">
+                    <h3>Program Overview</h3>
+                    <p>Invite to Rachel connects individuals struggling with mental health challenges to resources, support groups, and treatment options. This program recognizes that recovery often begins with a meaningful invitation to engage with community and professional support.</p>
+                </div>
+                <div class="vision-box">
+                    <h3>How It Works</h3>
+                    <p>Whether you're concerned about yourself or a loved one, Invite to Rachel provides information, guidance, and connections to mental health services. Our team helps you navigate the path to recovery and wellness with compassion and understanding.</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem; background: #f8f9fa; padding: 2rem; border-radius: 15px;">
+                <h3 style="color: #667eea; text-align: center; margin-bottom: 2rem;">What We Offer</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                    <div>
+                        <h4 style="color: #667eea; margin-bottom: 1rem;">📞 Confidential Consultations</h4>
+                        <p>Speak with trained professionals about your concerns and treatment options.</p>
+                    </div>
+                    <div>
+                        <h4 style="color: #667eea; margin-bottom: 1rem;">📚 Resources & Information</h4>
+                        <p>Access information about mental health conditions and available treatments.</p>
+                    </div>
+                    <div>
+                        <h4 style="color: #667eea; margin-bottom: 1rem;">🤝 Support Groups</h4>
+                        <p>Connect with others experiencing similar challenges in supportive settings.</p>
+                    </div>
+                    <div>
+                        <h4 style="color: #667eea; margin-bottom: 1rem;">🏥 Treatment Connection</h4>
+                        <p>Get connected to appropriate treatment and recovery services.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 2rem; text-align: center;">
+                <p style="font-size: 1.1rem; color: #667eea; font-weight: 500;">
+                    Ready to get started? Contact us today to learn more about the Invite to Rachel program.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#services">Services</a>
+                <a href="about.html">About</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+            <p>&copy; 2025 UNIMED Mental Health Resource (INC). All rights reserved.</p>
+            <p class="footer-tagline">Restoring Broken Lives, One Person at a Time</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

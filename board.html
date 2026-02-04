@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Board of Directors - UNIMED Mental Health Resource</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="img/unimed logo.png" alt="UNIMED Logo" class="logo-img">
+                <span>UNIMED</span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li class="dropdown">
+                    <a href="about.html" class="dropbtn">About ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="treatment.html">Treatment</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="addiction.html">Addiction Info</a></li>
+                        <li><a href="gallery.html">Facility Photo Tour</a></li>
+                        <li><a href="about.html">About UNIMED</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#admissions">Admissions</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Personnel ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="board.html">Board of Directors</a></li>
+                        <li><a href="advisory.html">Advisory Board Members</a></li>
+                        <li><a href="clinical.html">Clinical Team</a></li>
+                        <li><a href="support-team.html">Support Team</a></li>
+                        <li><a href="lahai.html">The Lahai's</a></li>
+                        <li><a href="bethel-staff.html">Bethel Staff</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="index.html#contact" class="dropbtn">Contact ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="index.html#contact">Contact Us</a></li>
+                        <li><a href="invite-to-rachel.html">Invite to Rachel</a></li>
+                        <li><a href="support-groups.html">Support to Groups</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#donate" class="btn-donate">Donate</a></li>
+            </ul>
+            <div class="mobile-menu" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero" id="home" style="margin-top: 70px; padding: 100px 2rem 50px;">
+        <h1>Board of Directors</h1>
+        <p class="tagline">Leadership dedicated to restoring broken lives</p>
+    </section>
+
+    <section class="section-padding bg-white">
+        <div class="container">
+            <h2 class="section-title">Our Board</h2>
+            <p style="text-align: center; font-size: 1.1rem; max-width: 800px; margin: 0 auto;">
+                Our Board of Directors brings together diverse expertise, passion, and commitment to advancing mental health care and support services.
+            </p>
+        </div>
+
+        <div class="leadership-subsection">
+                <h3>Leadership</h3>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <img src="img/doris.png" alt="Mrs. Doris Festus Lahai">
+                        <h4>Mrs. Doris Festus Lahai</h4>
+                        <p class="role">Founder & CFO</p>
+                        <p>Registered Nurse and Nurse Practitioner with extensive healthcare and organizational leadership background spanning multiple continents. Her passion for mental health advocacy stems from personal experience and her commitment to transforming lives.</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="img/festus.png" alt="Dr. Festus S Lahai">
+                        <h4>Dr. Festus S Lahai</h4>
+                        <p class="role">CEO</p>
+                        <p>Leading our organization with vision, strategic direction, and dedication to serving individuals with mental health challenges and substance abuse needs.</p>
+                    </div>
+                </div>
+            </div>
+
+        <div class="leadership-subsection">
+                <h3>Board of Directors</h3>
+                <div class="team-grid-small">
+                    <div class="team-card-small">
+                        <h4>Ms. Fatima Bangura</h4>
+                        <p class="role">Board Member</p>
+                    </div>
+                    <div class="team-card-small">
+                        <h4>Mr. Wilfred Kpandenyenge</h4>
+                        <p class="role">Board Member</p>
+                    </div>
+                    <div class="team-card-small">
+                        <h4>Ms. Roseline Jones</h4>
+                        <p class="role">Board Member</p>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#services">Services</a>
+                <a href="about.html">About</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+            <p>&copy; 2025 UNIMED Mental Health Resource (INC). All rights reserved.</p>
+            <p class="footer-tagline">Restoring Broken Lives, One Person at a Time</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

@@ -133,7 +133,7 @@
             .dropdown-content {
                 position: static;
                 display: none;
-                background: rgba(0, 0, 0, 0.2);
+                background: rgb(0, 0, 0);
                 min-width: auto;
                 border-radius: 0;
                 box-shadow: none;

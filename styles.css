@@ -127,6 +127,37 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
+        
+        /* Mobile dropdown fix */
+        @media (max-width: 768px) {
+            .dropdown-content {
+                position: static;
+                display: none;
+                background: rgba(0, 0, 0, 0.2);
+                min-width: auto;
+                border-radius: 0;
+                box-shadow: none;
+                padding: 0;
+                margin-top: 0;
+            }
+            
+            .dropdown-content li {
+                margin-left: 1rem;
+            }
+            
+            .dropdown-content a {
+                padding: 0.5rem 0.5rem;
+                font-size: 0.9rem;
+            }
+            
+            .dropdown:hover .dropdown-content {
+                display: none;
+            }
+            
+            .nav-links.active .dropdown-content {
+                display: block;
+            }
+        }
 
         /* Make dropdowns accessible on mobile when nav is active */
         @media (max-width: 900px) {
@@ -1413,8 +1444,30 @@
                 right: 0;
                 background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
                 flex-direction: column;
-                padding: 2rem;
-                gap: 1rem;
+                padding: 0;
+                gap: 0;
+                width: 100%;
+                max-height: calc(100vh - 70px);
+                overflow-y: auto;
+            }
+            
+            .nav-links li {
+                width: 100%;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            
+            .nav-links li a {
+                display: block;
+                padding: 1rem 2rem;
+                border: none;
+            }
+            
+            .nav-links .dropdown > a {
+                display: block;
+            }
+            
+            .nav-links li:last-child {
+                border-bottom: none;
             }
 
             .nav-links.active {
@@ -1423,6 +1476,7 @@
 
             .mobile-menu {
                 display: flex;
+                z-index: 1001;
             }
 
             .hero h1 {
@@ -1518,6 +1572,10 @@
                 padding: 0.8rem 0;
             }
 
+            nav {
+                padding: 0 1rem;
+            }
+
             .logo {
                 font-size: 1rem;
             }
@@ -1538,6 +1596,11 @@
             .hero .tagline {
                 font-size: 0.95rem;
             }
+            
+            .hero {
+                padding: 80px 1rem 2rem;
+                margin-top: 60px;
+            }
 
             .section-title {
                 font-size: 1.5rem;
@@ -1545,11 +1608,13 @@
 
             .cta-buttons {
                 gap: 0.8rem;
+                flex-direction: column;
             }
 
             .btn {
                 font-size: 0.9rem;
                 padding: 0.6rem 1.2rem;
+                width: 100%;
             }
 
             .carousel-container {
@@ -1600,6 +1665,15 @@
 
             .footer-logo {
                 gap: 1rem;
+            }
+            
+            .nav-links {
+                top: 60px;
+            }
+            
+            .nav-links li a {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.95rem;
             }
         }
     </style>

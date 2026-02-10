@@ -1,16 +1,49 @@
 /**
- * UNIMED Mobile Navigation Controller
- * Modern, modular navigation system for mobile responsiveness
- * Responsive design with smooth animations and accessibility features
+ * UNIMED Navigation & UI Controller
+ * Complete modern navigation system with carousel, forms, and responsive design
  */
 
+// ========== CAROUSEL FUNCTIONALITY ==========
+let currentSlideIndex = 0;
+let autoSlideInterval;
+
+const showSlide = (index) => {
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.dot');
+    
+    if (index >= slides.length) currentSlideIndex = 0;
+    else if (index < 0) currentSlideIndex = slides.length - 1;
+    else currentSlideIndex = index;
+    
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+    
+    slides[currentSlideIndex].classList.add('active');
+    dots[currentSlideIndex].classList.add('active');
+};
+
+const moveSlide = (direction) => {
+    showSlide(currentSlideIndex + direction);
+    resetAutoSlide();
+};
+
+const currentSlide = (index) => {
+    showSlide(index);
+    resetAutoSlide();
+};
+
+const resetAutoSlide = () => {
+    clearInterval(autoSlideInterval);
+    autoSlideInterval = setInterval(() => moveSlide(1), 5000);
+};
+
+// ========== MOBILE NAVIGATION CONTROLLER ==========
 class MobileNavController {
     constructor() {
         this.navLinks = document.getElementById('navLinks');
         this.mobileMenu = document.querySelector('.mobile-menu');
         this.dropdowns = this.navLinks?.querySelectorAll('.dropdown') || [];
         this.isMenuOpen = false;
-        this.activeDropdown = null;
         
         if (this.navLinks && this.mobileMenu) {
             this.init();
@@ -23,41 +56,9 @@ class MobileNavController {
         this.attachNavItemListeners();
         this.attachKeyboardListeners();
         this.attachWindowListeners();
+        this.attachClickOutsideListener();
     }
 
-    /**
-     * Toggle mobile menu open/close
-     */
-    toggleMenu() {
-        this.isMenuOpen ? this.closeMenu() : this.openMenu();
-    }
-
-    /**
-     * Open mobile menu with smooth animation
-     */
-    openMenu() {
-        this.navLinks.classList.add('active');
-        this.mobileMenu.classList.add('active');
-        document.body.style.overflow = 'hidden';
-        document.body.style.touchAction = 'none';
-        this.isMenuOpen = true;
-    }
-
-    /**
-     * Close mobile menu and all dropdowns
-     */
-    closeMenu() {
-        this.navLinks.classList.remove('active');
-        this.mobileMenu.classList.remove('active');
-        document.body.style.overflow = '';
-        document.body.style.touchAction = '';
-        this.closeAllDropdowns();
-        this.isMenuOpen = false;
-    }
-
-    /**
-     * Attach click listener to hamburger menu button
-     */
     attachMenuToggleListener() {
         this.mobileMenu?.addEventListener('click', (e) => {
             e.stopPropagation();
@@ -65,9 +66,25 @@ class MobileNavController {
         });
     }
 
-    /**
-     * Attach click listeners to dropdown toggle buttons
-     */
+    toggleMenu() {
+        this.isMenuOpen ? this.closeMenu() : this.openMenu();
+    }
+
+    openMenu() {
+        this.navLinks.classList.add('active');
+        this.mobileMenu.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        this.isMenuOpen = true;
+    }
+
+    closeMenu() {
+        this.navLinks.classList.remove('active');
+        this.mobileMenu.classList.remove('active');
+        document.body.style.overflow = '';
+        this.closeAllDropdowns();
+        this.isMenuOpen = false;
+    }
+
     attachDropdownListeners() {
         this.dropdowns.forEach(dropdown => {
             const dropbtn = dropdown.querySelector('.dropbtn');
@@ -75,7 +92,6 @@ class MobileNavController {
             
             if (!dropbtn || !content) return;
 
-            // Toggle dropdown on button click (mobile only)
             dropbtn.addEventListener('click', (e) => {
                 if (window.innerWidth <= 768) {
                     e.preventDefault();
@@ -84,33 +100,33 @@ class MobileNavController {
                 }
             });
         });
+    }
 
-        // Close dropdowns when clicking outside
-        document.addEventListener('click', (e) => {
-            if (window.innerWidth <= 768 && !e.target.closest('.dropdown')) {
-                // Don't close if clicking the menu button
-                if (!e.target.closest('.mobile-menu')) {
-                    this.closeAllDropdowns();
-                }
-            }
+    toggleDropdown(dropdown) {
+        const isActive = dropdown.classList.contains('active');
+        this.closeAllDropdowns();
+        
+        if (!isActive) {
+            dropdown.classList.add('active');
+        }
+    }
+
+    closeAllDropdowns() {
+        this.dropdowns.forEach(dropdown => {
+            dropdown.classList.remove('active');
         });
     }
 
-    /**
-     * Attach listeners to regular navigation items
-     */
     attachNavItemListeners() {
         const navItems = this.navLinks.querySelectorAll('li:not(.dropdown) > a');
         navItems.forEach(item => {
             item.addEventListener('click', () => {
-                // Close menu when clicking a regular link on mobile
                 if (window.innerWidth <= 768) {
                     this.closeMenu();
                 }
             });
         });
 
-        // Close menu when clicking dropdown links
         this.dropdowns.forEach(dropdown => {
             const links = dropdown.querySelectorAll('.dropdown-content a');
             links.forEach(link => {
@@ -123,64 +139,31 @@ class MobileNavController {
         });
     }
 
-    /**
-     * Toggle dropdown visibility
-     */
-    toggleDropdown(dropdown) {
-        const isActive = dropdown.classList.contains('active');
-        
-        // Close all dropdowns first
-        this.closeAllDropdowns();
-        
-        // Open the clicked dropdown if it wasn't already open
-        if (!isActive) {
-            dropdown.classList.add('active');
-            const content = dropdown.querySelector('.dropdown-content');
-            if (content) {
-                content.classList.add('show');
-            }
-            this.activeDropdown = dropdown;
-        }
-    }
-
-    /**
-     * Close all dropdowns with smooth animation
-     */
-    closeAllDropdowns() {
-        this.dropdowns.forEach(dropdown => {
-            dropdown.classList.remove('active');
-            const content = dropdown.querySelector('.dropdown-content');
-            if (content) {
-                content.classList.remove('show');
+    attachClickOutsideListener() {
+        document.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768 && this.isMenuOpen) {
+                if (!e.target.closest('nav')) {
+                    this.closeMenu();
+                }
             }
         });
-        this.activeDropdown = null;
     }
 
-    /**
-     * Keyboard accessibility
-     */
     attachKeyboardListeners() {
         document.addEventListener('keydown', (e) => {
-            // Close menu on ESC key
             if (e.key === 'Escape' && this.isMenuOpen) {
                 this.closeMenu();
             }
         });
     }
 
-    /**
-     * Handle window resize - close menu on desktop breakpoint
-     */
     attachWindowListeners() {
         window.addEventListener('resize', () => {
-            // Close menu if resizing to desktop
             if (window.innerWidth > 768 && this.isMenuOpen) {
                 this.closeMenu();
             }
         });
 
-        // Handle orientation changes on mobile
         window.addEventListener('orientationchange', () => {
             if (window.innerWidth > 768 && this.isMenuOpen) {
                 this.closeMenu();
@@ -189,9 +172,102 @@ class MobileNavController {
     }
 }
 
-/**
- * Initialize navigation controller when DOM is ready
- */
+// ========== DONATION FUNCTIONALITY ==========
+let selectedDonationAmount = 0;
+
+const selectAmount = (amount) => {
+    selectedDonationAmount = amount;
+    document.getElementById('customAmount').value = '';
+    
+    document.querySelectorAll('.amount-btn').forEach(btn => {
+        btn.classList.remove('selected');
+    });
+    event.target.classList.add('selected');
+};
+
+const selectCustomAmount = () => {
+    const customAmount = parseFloat(document.getElementById('customAmount').value);
+    if (customAmount > 0) {
+        selectedDonationAmount = customAmount;
+        document.querySelectorAll('.amount-btn').forEach(btn => {
+            btn.classList.remove('selected');
+        });
+    }
+};
+
+const processDonation = () => {
+    if (selectedDonationAmount <= 0) {
+        alert('Please select or enter a donation amount.');
+        return;
+    }
+
+    const donateBtn = document.getElementById('donateButton');
+    donateBtn.disabled = true;
+    donateBtn.textContent = 'Processing...';
+
+    setTimeout(() => {
+        alert(`Thank you for your generous donation of $${selectedDonationAmount.toFixed(2)}! Your support helps us restore broken lives and provide critical mental health services.\n\nA confirmation email will be sent to you shortly.`);
+        
+        selectedDonationAmount = 0;
+        document.getElementById('customAmount').value = '';
+        document.querySelectorAll('.amount-btn').forEach(btn => {
+            btn.classList.remove('selected');
+        });
+        donateBtn.disabled = false;
+        donateBtn.textContent = 'Donate Now';
+    }, 2000);
+};
+
+// ========== FORM HANDLING ==========
+const handleSubmit = (event) => {
+    event.preventDefault();
+    alert('Thank you for reaching out! We will contact you soon.');
+    event.target.reset();
+};
+
+// ========== SMOOTH SCROLLING ==========
+const setupSmoothScroll = () => {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', (e) => {
+            const href = anchor.getAttribute('href');
+            const target = document.querySelector(href);
+            
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+};
+
+// ========== HEADER SCROLL EFFECT ==========
+const setupHeaderScrollEffect = () => {
+    let lastScrollY = 0;
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        if (window.scrollY > 50) {
+            header.style.background = 'linear-gradient(135deg, #5568d3 0%, #6a3f94 100%)';
+        } else {
+            header.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+        }
+        lastScrollY = window.scrollY;
+    }, { passive: true });
+};
+
+// ========== INITIALIZATION ==========
 document.addEventListener('DOMContentLoaded', () => {
+    // Initialize mobile navigation
     new MobileNavController();
+    
+    // Start carousel auto-slide
+    autoSlideInterval = setInterval(() => moveSlide(1), 5000);
+    
+    // Setup smooth scrolling
+    setupSmoothScroll();
+    
+    // Setup header scroll effect
+    setupHeaderScrollEffect();
 });

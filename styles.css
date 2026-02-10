@@ -149,22 +149,22 @@
             align-items: center;
             gap: 6px;
             cursor: pointer;
-            padding: 10px;
+            padding: 8px;
             user-select: none;
             background: transparent;
             border: none;
             width: 44px;
             height: 44px;
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .mobile-menu:hover {
-            background: rgba(255, 255, 255, 0.1);
+        .mobile-menu:active {
+            background: rgba(255, 255, 255, 0.15);
             border-radius: 8px;
         }
 
         .mobile-menu span {
-            width: 26px;
+            width: 24px;
             height: 2px;
             background: white;
             border-radius: 2px;
@@ -173,7 +173,7 @@
         }
 
         .mobile-menu.active span:nth-child(1) {
-            transform: translateY(10px) rotate(45deg);
+            transform: translateY(8px) rotate(45deg);
         }
 
         .mobile-menu.active span:nth-child(2) {
@@ -181,7 +181,7 @@
         }
 
         .mobile-menu.active span:nth-child(3) {
-            transform: translateY(-10px) rotate(-45deg);
+            transform: translateY(-8px) rotate(-45deg);
         }
 
         /* ========== MOBILE RESPONSIVE (≤768px) ========== */
@@ -205,11 +205,9 @@
                 gap: 0;
                 padding: 0;
                 overflow-y: auto;
-                transition: left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+                transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
                 z-index: 999;
                 list-style: none;
-                padding-top: 8px;
-                padding-bottom: 20px;
             }
 
             .nav-links.active {
@@ -221,21 +219,19 @@
                 border: none;
             }
 
-            .nav-links a {
+            .nav-links > li > a {
                 display: block;
-                padding: 14px 24px;
+                padding: 16px 20px;
                 width: 100%;
                 box-sizing: border-box;
-                font-size: 0.95rem;
+                font-size: 1rem;
                 font-weight: 500;
                 color: white;
                 transition: all 0.2s ease;
-                border-left: 4px solid transparent;
             }
 
-            .nav-links a:active {
-                background: rgba(255, 255, 255, 0.08);
-                border-left-color: #ffd700;
+            .nav-links > li > a:active {
+                background: rgba(0, 0, 0, 0.1);
             }
 
             .nav-links .dropdown {
@@ -247,23 +243,21 @@
                 align-items: center;
                 justify-content: space-between;
                 width: 100%;
-                padding: 14px 24px;
+                padding: 16px 20px;
                 background: none;
                 border: none;
                 color: white;
-                font-size: 0.95rem;
+                font-size: 1rem;
                 font-weight: 500;
                 cursor: pointer;
                 transition: all 0.2s ease;
-                border-left: 4px solid transparent;
             }
 
             .nav-links .dropbtn::after {
                 content: '›';
                 font-size: 1.5rem;
-                transition: transform 0.3s ease;
+                transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
                 margin-left: auto;
-                margin-right: 4px;
             }
 
             .nav-links .dropdown.active .dropbtn::after {
@@ -273,7 +267,7 @@
             .dropdown-content {
                 position: static !important;
                 display: none;
-                background: rgba(0, 0, 0, 0.15);
+                background: rgba(0, 0, 0, 0.2);
                 min-width: auto;
                 border-radius: 0;
                 box-shadow: none;
@@ -295,19 +289,19 @@
             }
 
             .dropdown-content a {
-                padding: 12px 24px 12px 48px;
-                font-size: 0.9rem;
-                color: rgba(255, 255, 255, 0.85);
-                border-left: 4px solid transparent;
+                padding: 14px 20px 14px 48px;
+                font-size: 0.95rem;
+                color: rgba(255, 255, 255, 0.9);
+                display: block;
+                transition: all 0.2s ease;
             }
 
             .dropdown-content a:active {
-                background: rgba(255, 255, 255, 0.05);
-                border-left-color: #ffd700;
+                background: rgba(0, 0, 0, 0.1);
             }
 
             .nav-links .btn-donate {
-                margin: 16px 20px;
+                margin: 12px 20px;
                 width: calc(100% - 40px);
                 padding: 12px 20px;
                 display: block;
@@ -315,13 +309,11 @@
                 border-radius: 8px;
                 font-weight: 600;
                 transition: all 0.2s ease;
-                background: #ffd700;
-                color: #667eea;
                 border: none;
             }
 
             .nav-links .btn-donate:active {
-                transform: scale(0.95);
+                transform: scale(0.97);
                 opacity: 0.9;
             }
         }

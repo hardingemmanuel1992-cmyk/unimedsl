@@ -85,20 +85,5 @@
     </footer>
 
     <script src="navigation.js"></script>
-    <script>
-        // Close menu when a link is clicked
-        document.addEventListener('DOMContentLoaded', function() {
-            const navLinks = document.getElementById('navLinks');
-            const navItems = navLinks.querySelectorAll('a');
-            
-            navItems.forEach(item => {
-                item.addEventListener('click', function() {
-                    if (!this.classList.contains('dropbtn')) {
-                        navLinks.classList.remove('active');
-                    }
-                });
-            });
-        });
-    </script>
 </body>
 </html>
